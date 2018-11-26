@@ -1,0 +1,39 @@
+﻿<Window x:Class="Älytalosovellus_AtteNousiainen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Älytalosovellus_AtteNousiainen"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="724.642" Width="1026.934">
+    <Grid>
+        <Label x:Name="LabelValot" Content="Valot" HorizontalAlignment="Left" Height="49" Margin="10,10,0,0" VerticalAlignment="Top" Width="279" FontSize="24" FontWeight="Bold"/>
+        <Button x:Name="BtnValoPois" Content="POIS" HorizontalAlignment="Left" Height="56" Margin="10,64,0,0" VerticalAlignment="Top" Width="185" FontSize="24" FontWeight="Bold" Click="BtnValoPois_Click" Background="#FFBB0909"/>
+        <Button x:Name="BtnValoHamara" Content="HÄMÄRÄ" HorizontalAlignment="Left" Height="56" Margin="219,64,0,0" VerticalAlignment="Top" Width="185" FontSize="24" FontWeight="Bold" Click="BtnValoHamara_Click" Background="#FF9E9E17"/>
+        <Button x:Name="BtnValoPuolivalo" Content="PUOLIVALO" HorizontalAlignment="Left" Height="56" Margin="428,64,0,0" VerticalAlignment="Top" Width="185" FontWeight="Bold" FontSize="24" Click="BtnValoPuolivalo_Click" Background="#FFF0F064"/>
+        <Button x:Name="BtnValoKirkas" Content="KIRKAS" HorizontalAlignment="Left" Height="56" Margin="634,64,0,0" VerticalAlignment="Top" Width="185" FontWeight="Bold" FontSize="24" Click="BtnValoKirkas_Click" Background="#FFFFFF94"/>
+        <TextBox x:Name="TxtTeho" HorizontalAlignment="Left" Height="56" Margin="839,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" TextChanged="TextBox_TextChanged" FontSize="36" FontWeight="Bold" Text="0"/>
+        <TextBox x:Name="txtVirta" HorizontalAlignment="Left" Height="56" Margin="928,64,0,0" TextWrapping="Wrap" Text="False" VerticalAlignment="Top" Width="81" FontSize="24" FontWeight="Bold"/>
+        <Label x:Name="LblTeho" Content="Teho" HorizontalAlignment="Left" Height="34" Margin="839,25,0,0" VerticalAlignment="Top" Width="84" FontSize="20" FontWeight="Bold"/>
+        <Label x:Name="LblVirta" Content="Virta" HorizontalAlignment="Left" Height="39" Margin="928,25,0,0" VerticalAlignment="Top" Width="81" FontSize="20" FontWeight="Bold"/>
+        <Slider x:Name="SldrValot" HorizontalAlignment="Left" Height="53" Margin="85,147,0,0" VerticalAlignment="Top" Width="651" Maximum="100" SmallChange="1" ValueChanged="SldrValot_ValueChanged" TickPlacement="Both" Ticks="33 66 100" RenderTransformOrigin="0.488,0.645" Foreground="Black" BorderThickness="0" TickFrequency="33" LargeChange="33"/>
+        <Label x:Name="LblSauna" Content="Sauna" HorizontalAlignment="Left" Height="44" Margin="10,187,0,0" VerticalAlignment="Top" Width="101" FontSize="24" FontWeight="Bold"/>
+        <Button x:Name="BtnSaunaPois" Content="SAMMUTA" HorizontalAlignment="Left" Height="55" Margin="10,236,0,0" VerticalAlignment="Top" Width="185" FontSize="24" FontWeight="Bold" Click="BtnSaunaPois_Click" Background="#FFBB0909"/>
+        <Button x:Name="BtnSaunaPaalle" Content="KÄYNNISTÄ" HorizontalAlignment="Left" Height="55" Margin="428,236,0,0" VerticalAlignment="Top" Width="185" FontSize="24" FontWeight="Bold" Click="BtnSaunaPaalle_Click" Background="#FF05A413"/>
+        <TextBox x:Name="TxtBoxSauna" HorizontalAlignment="Left" Height="55" Margin="839,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" FontSize="22" FontWeight="Bold"/>
+        <Label x:Name="LblSaunaTila" Content="Saunan tila" HorizontalAlignment="Left" Height="33" Margin="839,198,0,0" VerticalAlignment="Top" Width="170" FontWeight="Bold" FontSize="20"/>
+        <Label x:Name="LblLampotila" Content="Talon lämpötila" HorizontalAlignment="Left" Height="42" Margin="10,389,0,0" VerticalAlignment="Top" Width="185" FontSize="24" FontWeight="Bold"/>
+        <Button x:Name="BtnLampotila" Content="ASETA LÄMPÖTILA" HorizontalAlignment="Left" Height="56" Margin="10,457,0,0" VerticalAlignment="Top" Width="185" FontWeight="Bold" FontSize="20" Click="BtnLampotila_Click" Background="#FF05A413"/>
+        <TextBox x:Name="TxtBoxNewTemp" HorizontalAlignment="Left" Height="56" Margin="428,457,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="63" FontSize="36" FontWeight="Bold"/>
+        <Label x:Name="LblCelsius1" Content="C°" HorizontalAlignment="Left" Height="56" Margin="496,457,0,0" VerticalAlignment="Top" Width="57" FontSize="36" FontWeight="Bold"/>
+        <TextBox x:Name="TxtBoxCurrTemp" HorizontalAlignment="Left" Height="54" Margin="428,530,0,0" TextWrapping="Wrap" Text="21" VerticalAlignment="Top" Width="63" FontSize="36" FontWeight="Bold"/>
+        <Label x:Name="LblCelsius2" Content="C°" HorizontalAlignment="Left" Height="56" Margin="496,530,0,0" VerticalAlignment="Top" Width="57" FontSize="36" FontWeight="Bold"/>
+        <Label x:Name="LblSetNewTemp" Content="Aseta uusi lämpötila (18C°-31C°):" HorizontalAlignment="Left" Height="56" Margin="219,457,0,0" VerticalAlignment="Top" Width="204" FontWeight="Bold"/>
+        <Label x:Name="LblCurrTemp" Content="Nykyinen lämpötila: " HorizontalAlignment="Left" Height="56" Margin="219,528,0,0" VerticalAlignment="Top" Width="204" FontWeight="Bold" FontSize="20"/>
+        <Button x:Name="BtnExit" Content="LOPETA" HorizontalAlignment="Left" Height="56" Margin="849,530,0,0" VerticalAlignment="Top" Width="160" FontSize="24" FontWeight="Bold" Click="BtnExit_Click" Background="#FFBB0909"/>
+        <Label x:Name="LblSaunaLampo" Content="30" HorizontalAlignment="Left" Height="55" Margin="736,236,0,0" VerticalAlignment="Top" Width="51" FontWeight="Bold" FontSize="36"/>
+        <Label x:Name="LblSaunanLampoC" Content="C°" HorizontalAlignment="Left" Height="55" Margin="792,236,0,0" VerticalAlignment="Top" Width="47" FontSize="36" FontWeight="Bold"/>
+        <Label x:Name="LblSaunanLampotila" Content="Saunan lämpötila:" HorizontalAlignment="Left" Height="41" Margin="618,250,0,0" VerticalAlignment="Top" Width="118" FontWeight="Bold"/>
+
+    </Grid>
+</Window>
